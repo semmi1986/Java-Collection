@@ -33,5 +33,9 @@ public class Solution {
 
         //напишите тут ваш код
 
+        for (Map.Entry e: map.entrySet()){
+            System.out.println(e.getKey() + " " + e.getValue());
+        }
+
     }
 }

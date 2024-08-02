@@ -2,6 +2,7 @@ package task0803;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /* 
 Есть класс Cat с полем имя (name, String).
@@ -30,7 +31,11 @@ public class Solution {
 
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         //напишите тут ваш код
-
+        Map<String, Cat> arrMap = new HashMap<>();
+        for (String cat : cats) {
+            arrMap.put(cat, new Cat(cat));
+        }
+        return arrMap;
     }
 
 
@@ -39,6 +44,19 @@ public class Solution {
 
         public Cat(String name) {
             this.name = name;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Cat cat = (Cat) o;
+            return Objects.equals(name, cat.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(name);
         }
 
         @Override

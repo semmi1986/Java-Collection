@@ -33,5 +33,8 @@ public class Solution {
 
     public static void printValues(Map<String, String> map) {
         //напишите тут ваш код
+        for (String s: map.values()){
+            System.out.println(s);
+        }
     }
 }

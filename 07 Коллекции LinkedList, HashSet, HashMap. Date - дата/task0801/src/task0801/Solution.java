@@ -31,6 +31,21 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
+        HashSet<String> hs = new HashSet<>();
+        hs.add("арбуз");
+        hs.add("банан");
+        hs.add("вишня");
+        hs.add("груша");
+        hs.add("дыня");
+        hs.add("ежевика");
+        hs.add("жень-шень");
+        hs.add("земляника");
+        hs.add("ирис");
+        hs.add("картофель");
+
+        for (String s: hs){
+            System.out.println( s );
+        }
 
     }
 }

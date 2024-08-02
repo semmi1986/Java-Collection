@@ -28,6 +28,28 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        int init = 5;
+        System.out.println("Ввуди " + init + " чисел");
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < init; i++) {
+            list.add(Integer.parseInt(input.readLine()));
+        }
 
+        int repeatCount = 1;
+        int maxRepeatCount = 1;
+
+        for (int i = 1; i < list.size(); i++) {
+            if (!list.get(i - 1).equals(list.get(i))){
+                repeatCount = 1;
+            }else {
+                repeatCount ++;
+                if (repeatCount>maxRepeatCount){
+                    maxRepeatCount=repeatCount;
+                }
+            }
+        }
+
+        System.out.println(maxRepeatCount);
     }
 }

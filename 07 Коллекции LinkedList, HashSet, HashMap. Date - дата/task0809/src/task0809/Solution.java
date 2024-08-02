@@ -25,10 +25,12 @@ public class Solution {
 
     public static long getInsertTimeInMs(List list) {
         // напишите тут ваш код
-
+        Date timeAfter = new Date();
         insert10000(list);
 
         // напишите тут ваш код
+        Date timeBefor = new Date();
+        return timeBefor.getTime() - timeAfter.getTime();
 
     }
 
