@@ -19,8 +19,8 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[20];
-        for (int i = 0; i < 20; i++) {
+        int[] array = new int[5];
+        for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
 
@@ -33,5 +33,14 @@ public class Solution {
 
     public static void sort(int[] array) {
         //напишите тут ваш код
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    int init= array[i];
+                    array[i] = array[j];
+                    array[j] = init;
+                }
+            }
+        }
     }
 }

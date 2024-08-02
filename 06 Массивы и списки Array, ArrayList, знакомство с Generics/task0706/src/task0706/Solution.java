@@ -25,5 +25,31 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
+        BufferedReader num = new BufferedReader(new InputStreamReader(System.in));
+        int[] house = new int[3];
+        System.out.println("введите числом жителей, проживающих в доме " + house.length + " раза");
+
+        for (int i = 0; i < house.length; i++) {
+            house[i] = Integer.parseInt(num.readLine());
+        }
+
+        int evenNumber = 0;
+        int oddNumber = 0;
+
+        for (int i = 0; i < house.length; i++) {
+            if(i%2==0){
+                evenNumber += house[i];
+            }else{
+                oddNumber += house[i];
+        }
+        }
+
+        if (evenNumber > oddNumber) {
+            System.out.println("В домах с четными номерами проживает больше жителей.");
+        }else {
+            System.out.println("В домах с нечетными номерами проживает больше жителей.");
+        }
+
+
     }
 }

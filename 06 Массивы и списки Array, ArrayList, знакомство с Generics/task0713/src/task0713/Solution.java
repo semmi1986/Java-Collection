@@ -26,9 +26,48 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        ArrayList<Integer> allArr = new ArrayList<>();
+        ArrayList<Integer> listWith3 = new ArrayList<>();
+        ArrayList<Integer> listWith2 = new ArrayList<>();
+        ArrayList<Integer> listWithOther = new ArrayList<>();
+        BufferedReader num = new BufferedReader(new InputStreamReader(System.in));
+        int init = 10;
+        System.out.println("Введи с клавиатуры " + init + " чисел");
+
+        for (int i = 0; i < init; i++) {
+            allArr.add(Integer.parseInt(num.readLine()));
+        }
+
+        for (int i = 0; i < allArr.size(); i++) {
+            if (allArr.get(i)%3==0 && allArr.get(i)%2==0) {
+                listWith3.add(allArr.get(i));
+                listWith2.add(allArr.get(i));
+            } else if (allArr.get(i)%2==0) {
+                listWith2.add(allArr.get(i));
+            } else if (allArr.get(i)%3==0) {
+                listWith3.add(allArr.get(i));
+            }else {
+                listWithOther.add(allArr.get(i));
+            }
+        }
+
+        System.out.println("Лист который для x%3");
+        System.out.println(listWith3);
+        printList(listWith3);
+        System.out.println("Лист который для x%2");
+        System.out.println(listWith2);
+        printList(listWith2);
+        System.out.println("Лист который для остальных");
+        System.out.println(listWithOther);
+        printList(listWithOther);
+
+
     }
 
     public static void printList(ArrayList<Integer> list) {
         //напишите тут ваш код
+        for (int i: list){
+            System.out.println(i);
+        }
     }
 }

@@ -20,5 +20,18 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
+        ArrayList<String> random = new ArrayList<>();
+        random.add("ok");
+        random.add("privet");
+        random.add("poka");
+        random.add("asddf");
+        random.add("qwerwer");
+
+        System.out.println(random.size());
+
+        for (String s: random){
+            System.out.println(s);
+        }
+
     }
 }

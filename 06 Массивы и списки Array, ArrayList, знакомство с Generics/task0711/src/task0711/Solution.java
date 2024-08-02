@@ -20,5 +20,26 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        BufferedReader str = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("ВВеди 5 строк");
+        ArrayList<String> list = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            list.add(str.readLine());
+        }
+
+        String lastStr = list.get(list.size()-1);
+        list.remove(list.size()-1);
+
+        for (int i = 0; i < 13; i++) {
+            list.add(0, lastStr);
+        }
+
+        for (String s: list){
+            System.out.println(s);
+        }
+
+       System.out.println( "удаленный элемент со значением " + lastStr);
+
     }
 }

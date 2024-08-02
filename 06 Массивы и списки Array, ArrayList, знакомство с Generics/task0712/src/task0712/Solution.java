@@ -24,5 +24,36 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
+        BufferedReader strInput = new BufferedReader(new InputStreamReader(System.in));
+        int elemInArr = 5;
+        System.out.println("Введи " + elemInArr + " строк");
+        ArrayList<String> strList = new ArrayList<>();
+        for (int i = 0; i < elemInArr; i++) {
+            strList.add(strInput.readLine());
+        }
+        int initNumber = strList.get(0).length();
+        int max = initNumber;
+        int min = initNumber;
+
+        for (String s: strList){
+            if(s.length() > initNumber){
+                max = s.length();
+            }
+            if(s.length()< initNumber){
+                min = s.length();
+            }
+        }
+
+        for (String s: strList){
+            if(s.length()==max || s.length()==min){
+                System.out.println(s);
+                break;
+            }
+        }
+
+
+
+
+
     }
 }

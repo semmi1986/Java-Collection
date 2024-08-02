@@ -21,5 +21,23 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        BufferedReader str = new BufferedReader(new InputStreamReader(System.in));
+
+        String [] arrStr= new String[3];
+        int [] arrNum= new int[3];
+
+        System.out.println("введи " + arrStr.length + " строк");
+
+        for (int i = 0; i < arrStr.length; i++) {
+            arrStr[i] = str.readLine();
+            arrNum[i] = arrStr[i].length();
+        }
+
+       for (int s: arrNum){
+           System.out.println(s);
+       }
+
+
+
     }
 }

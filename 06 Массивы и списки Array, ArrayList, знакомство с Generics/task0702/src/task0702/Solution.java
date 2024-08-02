@@ -2,6 +2,8 @@ package task0702;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /* 
 Массив из строчек в обратном порядке
@@ -18,6 +20,18 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws Exception {
+        BufferedReader str = new BufferedReader(new InputStreamReader(System.in));
+        String[] arrStr = new String[10];
+
+        for (int i = 0; i < 8; i++) {
+            arrStr[i] = str.readLine();
+        }
+
+        for (int i = arrStr.length-1; i >= 0 ; i--) {
+            System.out.println(arrStr[i]);
+        }
+
+
         //напишите тут ваш код
     }
 }

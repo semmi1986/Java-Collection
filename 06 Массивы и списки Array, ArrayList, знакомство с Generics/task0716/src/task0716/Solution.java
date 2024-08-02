@@ -32,19 +32,36 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<String>();
-        strings.add("роза");
-        strings.add("лоза");
-        strings.add("лира");
-        strings = fix(strings);
+        ArrayList<String> listStr = new ArrayList<>();
+        listStr.add("роза");
+        listStr.add("лоза");
+        listStr.add("лира");
+        listStr.add("лoра");
+        listStr = fix(listStr);
 
-        for (String string : strings) {
-            System.out.println(string);
+
+        for (String s : listStr) {
+            System.out.println(s);
         }
     }
 
-    public static ArrayList<String> fix(ArrayList<String> strings) {
+    public static ArrayList<String> fix(ArrayList<String> list) {
         //напишите тут ваш код
-        return null;
+        for (int i = list.size()-1; i >=0 ; i--) {
+            if(list.get(i).contains("р") && !list.get(i).contains("л")){
+                list.remove(i);
+            }
+
+        }
+
+        for (int i = list.size()-1; i >=0; i--) {
+            if (list.get(i).contains("л") && !list.get(i).contains("р")) {
+                list.add(list.get(i));
+            }
+        }
+
+
+        return list;
+
     }
 }

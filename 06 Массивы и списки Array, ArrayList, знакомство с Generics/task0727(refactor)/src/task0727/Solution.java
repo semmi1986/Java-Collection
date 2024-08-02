@@ -35,21 +35,41 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> strings = new ArrayList<String>();
+/*        ArrayList<String> strings = new ArrayList<>();
         while (true) {
             String string = reader.readLine();
             if (string == null || string.isEmpty()) break;
             strings.add(string);
         }
 
-        ArrayList<String> resultStrings = new ArrayList<String>();
-        for (int i = 0; i < strings.size(); i++) {
-            String string = strings.get(i);
+        ArrayList<String> resultStrings = new ArrayList<>();
+        for (String string : strings) {
             resultStrings.add(string.toUpperCase());
         }
 
-        for (int i = 0; i < resultStrings.size(); i++) {
-            System.out.println(resultStrings.get(i));
+        for (String resultString : resultStrings) {
+            System.out.println(resultString);
+        }*/
+
+        ArrayList<String> list = new ArrayList<>();
+        while (true) {
+            String string = reader.readLine();
+            if (string == null || string.isEmpty()) break;
+            list.add(string);
+        }
+
+
+
+        ArrayList<String> list2 = new ArrayList<>();
+        for (String s : list) {
+            if (s.length() % 2 == 0)
+                list2.add(s + " " + s);
+            else
+                list2.add(s + " " + s + " " + s);
+        }
+
+        for (String s : list2) {
+            System.out.println(s);
         }
     }
 }

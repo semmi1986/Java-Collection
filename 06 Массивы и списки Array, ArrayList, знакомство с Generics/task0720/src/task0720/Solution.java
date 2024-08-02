@@ -24,7 +24,25 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+        ArrayList<String> list = new ArrayList<>();
         //напишите тут ваш код
+        System.out.println("введите число соответствующее количество для блока первых строк");
+        int N = Integer.parseInt(reader.readLine());
+        System.out.println("введите число соответствующее количество для блока вторых строк");
+        int M = Integer.parseInt(reader.readLine());
+        System.out.println("введите " +N + " слов для первого блока");
+        for (int i = 0; i < N; i++) {
+            list.add(reader.readLine());
+        }
+        System.out.println("введите " +M + " слов для второго блока");
+        for (int i = 0; i < M; i++) {
+            list.add(reader.readLine());
+        }
+
+        for (String s: list){
+            System.out.println(s);
+        }
+
+
     }
 }

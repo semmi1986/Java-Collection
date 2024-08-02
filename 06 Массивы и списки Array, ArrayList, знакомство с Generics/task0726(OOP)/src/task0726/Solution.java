@@ -22,21 +22,19 @@ Requirements:
 5. Если пользователь ввел пустую строку вместо имени, то программа должна вывести данные на экран и завершиться.*/
 
 public class Solution {
-    public final static ArrayList<Cat> CATS = new ArrayList<>();
+    public final static ArrayList<Cat> CATS = new ArrayList<Cat>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         while (true) {
             String name = reader.readLine();
-
             if (name.isEmpty()) break;
-
             int age = Integer.parseInt(reader.readLine());
             int weight = Integer.parseInt(reader.readLine());
             int tail = Integer.parseInt(reader.readLine());
 
-            Cat cat = new Cat(name,age,weight,tail);
+            Cat cat = new Cat(name, age, weight, tail);
             CATS.add(cat);
         }
 
@@ -64,7 +62,7 @@ public class Solution {
 
         @Override
         public String toString() {
-            return "Cat's name: " + name + ", age: " + age + ", weight: " + weight + ", tail: " + tailLength;
+            return "Cat name: " + name + ", age: " + age + ", weight: " + weight + ", tail: " + tailLength;
         }
     }
 }

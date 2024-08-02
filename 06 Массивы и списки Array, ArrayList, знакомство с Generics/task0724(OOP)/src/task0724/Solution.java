@@ -25,10 +25,53 @@ Requirements:
 public class Solution {
     public static void main(String[] args) {
         // напишите тут ваш код
+        Human grandfather1 = new Human ("Вовы",true,50);
+        Human grandfather2 = new Human ("Толя",true,55);
+        Human grandmother1 = new Human ("Наташа",false,49);
+        Human grandmother2 = new Human ("Ира",false,53);
+
+        Human mother = new Human ("Катя",false,23, grandfather2, grandmother2);
+        Human father = new Human ("Иван",true,35, grandfather1, grandmother1);
+
+        Human child1 = new Human ("Вика",false,2, mother, father);
+        Human child2 = new Human ("Оля",false,2, mother, father);
+        Human child3 = new Human ("Коля",false,2, mother, father);
+
+        System.out.println(grandfather1);
+        System.out.println(grandfather2);
+        System.out.println(grandmother1);
+        System.out.println(grandfather2);
+        System.out.println(mother);
+        System.out.println(father);
+        System.out.println(child1);
+        System.out.println(child2);
+        System.out.println(child3);
+
     }
 
     public static class Human {
         // напишите тут ваш код
+        String name;
+        boolean sex;
+        int age;
+        Human father;
+        Human mother;
+
+        public Human(String name, boolean sex, int age) {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.father = null;
+            this.mother = null;
+        }
+
+        public Human(String name, boolean sex, int age, Human father, Human mother) {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.father = father;
+            this.mother = mother;
+        }
 
         public String toString() {
             String text = "";

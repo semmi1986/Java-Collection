@@ -22,5 +22,23 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        System.out.println("Введи 5 строк");
+        strings = new ArrayList<>();
+        BufferedReader strInput = new BufferedReader(new InputStreamReader(System.in));
+
+        for (int i = 0; i < 5; i++) {
+            strings.add(strInput.readLine());
+        }
+
+        int maxSizeStr = 0;
+        for (String s: strings){
+            if (s.length()> maxSizeStr) maxSizeStr = s.length();
+        }
+
+        for (String s: strings){
+            if (maxSizeStr == s.length()) System.out.println(s);
+        }
+
+
     }
 }

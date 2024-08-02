@@ -20,7 +20,25 @@ Requirements:
 
 public class Solution {
     public static void main(String[] args) throws IOException {
+        BufferedReader strInput = new BufferedReader(new InputStreamReader(System.in));
         //напишите тут ваш код
+        int init = 6;
+        ArrayList<String> list = new ArrayList<>();
+
+        for (int i = 0; i < init; i++) {
+            list.add(strInput.readLine());
+        }
+
+        for (int i = 0; i < list.size()-1; i++) {
+            if (list.get(i).length() > list.get(i+1).length()){
+                System.out.println(i);
+                break;
+            }
+        }
+
+
+
+
     }
 }
 

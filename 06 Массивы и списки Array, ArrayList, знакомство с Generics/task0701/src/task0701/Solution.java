@@ -27,11 +27,26 @@ public class Solution {
 
     public static int[] initializeArray() throws IOException {
         // создай и заполни массив
-        return null;
+
+        BufferedReader num = new BufferedReader(new InputStreamReader(System.in));
+        int [] resNum = new int[5];
+        System.out.println("Введи " + resNum.length + " чисел");
+
+        for (int i = 0; i < resNum.length; i++) {
+            resNum[i] = Integer.parseInt(num.readLine());
+        }
+
+        return resNum;
     }
 
     public static int max(int[] array) {
         // найди максимальное значение
-        return 0;
+        int maxNumOfArr = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if(maxNumOfArr<array[i]){
+                maxNumOfArr = array[i];
+            }
+        }
+        return maxNumOfArr;
     }
 }
